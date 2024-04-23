@@ -1,7 +1,8 @@
+import Hero from "./Hero";
 const Home = () => {
 	return (
 		<>
-			<h1>Hello world from react</h1>
+           <Hero text= "Welcome to React 201"/>
 		</>
 	);
 };

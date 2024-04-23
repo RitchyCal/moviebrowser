@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
-			<div className="container-fluid">
-				<a className="navbar-brand" href="somewhere">
+			<div class="container-fluid">
+				<Link className="navbar-brand" to="/">
 					Movie Browser
-				</a>
+				</Link>
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -19,18 +21,18 @@ const Navbar = () => {
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 						<li className="nav-item">
-							<a
+							<Link
 								className="nav-link active"
 								aria-current="page"
-								href="somewhere"
+								to="/"
 							>
 								Home
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="somewhere">
-								Link
-							</a>
+							<Link className="nav-link" to="/about">
+								About
+							</Link>
 						</li>
 						<li className="nav-item dropdown">
 							<a
@@ -45,22 +47,22 @@ const Navbar = () => {
 							</a>
 							<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
 								<li>
-									<a className="dropdown-item" href="somewhere">
+									<Link className="dropdown-item" href="somewhere">
 										Action
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a className="dropdown-item" href="somewhere">
+									<Link className="dropdown-item" href="somewhere">
 										Another action
-									</a>
+									</Link>
 								</li>
 								<li>
 									<hr className="dropdown-divider" />
 								</li>
 								<li>
-									<a className="dropdown-item" href="somewhere">
+									<Link className="dropdown-item" href="somewhere">
 										Something else here
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</li>
@@ -68,10 +70,10 @@ const Navbar = () => {
 							<a
 								className="nav-link disabled"
 								href="somewhere"
-								tabIndex="-1"
+								tabindex="-1"
 								aria-disabled="true"
 							>
-								Disabled
+								Coming Soon
 							</a>
 						</li>
 					</ul>
