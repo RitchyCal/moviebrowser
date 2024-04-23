@@ -1,9 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({searchText, setSearchText}) => {
+	const navigate = useNavigate()
+
+	const updateSearchText = (e) =>{
+		navigate("/search")
+		setSearchText(e.target.value);
+	}
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
+			<div className="container-fluid">
 				<Link className="navbar-brand" to="/">
 					Movie Browser
 				</Link>
@@ -70,7 +76,7 @@ const Navbar = () => {
 							<a
 								className="nav-link disabled"
 								href="somewhere"
-								tabindex="-1"
+								tabIndex="-1"
 								aria-disabled="true"
 							>
 								Coming Soon
@@ -83,6 +89,8 @@ const Navbar = () => {
 							type="search"
 							placeholder="Search"
 							aria-label="Search"
+							value={searchText}
+							onChange={updateSearchText}
 						/>
 						<button className="btn btn-outline-success" type="submit">
 							Search
