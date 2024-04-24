@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import AboutView from "./components/About";
+import MovieView from "./components/MovieView";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import SearchView from "./components/SearchView";
@@ -17,7 +18,7 @@ function App() {
 			method: "GET",
 			headers: {
 				accept: "application/json",
-				Authorization: process.env.TMD_BEARER,
+				Authorization: process.env.REACT_APP_TMD_BEARER,
 			},
 		};
 
@@ -41,6 +42,7 @@ function App() {
 						<SearchView keyword={searchText} searchResults={searchResults} />
 					}
 				/>
+				<Route path="/movie/:id" element={<MovieView/>}/>
 			</Routes>
 		</div>
 	);

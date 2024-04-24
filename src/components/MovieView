@@ -1,0 +1,22 @@
+import { useParams } from "react-router-dom";
+import Hero from "./Hero";
+import { useState, useEffect } from "react";
+
+const MovieView = () =>{
+    const {id} = useParams()
+    const [movieDetails, setMovieDetails] = useState({})
+
+    useEffect (() => {
+        console.log('make an api request');
+    },[id])
+
+    
+    console.log(id)
+    return (
+			<>
+                <Hero text="About us"/>
+			</>
+		);
+}
+
+export default MovieView
