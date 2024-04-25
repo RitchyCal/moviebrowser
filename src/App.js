@@ -42,7 +42,7 @@ function App() {
 						<SearchView keyword={searchText} searchResults={searchResults} />
 					}
 				/>
-				<Route path="/movie/:id" element={<MovieView/>}/>
+				<Route path="/movies/:id" element={<MovieView/>}/>
 			</Routes>
 		</div>
 	);
