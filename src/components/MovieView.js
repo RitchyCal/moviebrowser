@@ -32,9 +32,10 @@ const MovieView = () => {
 		if (movieDetails) {
 			//  todo: deal with missing imaheg
 			const posterPath = `https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`;
+            const backDropUrl = `https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`
 			return (
 				<>
-					<Hero text={movieDetails.original_title} />
+					<Hero text={movieDetails.original_title} backdrop={backDropUrl}/>
 					<div className="container my-5">
 						<div className="row">
 							<div className="col-md-3">
